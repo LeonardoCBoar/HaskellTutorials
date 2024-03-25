@@ -265,6 +265,8 @@ ghci>
 ```
 
 ## Código Fonte Completo
+
+```haskell
 module Lib
     ( Vector (..), sumVec, subVec, multVec, integralDivVec, dotProduct, magnitude
     ) where
@@ -278,7 +280,6 @@ data Vector a = Vector2 { x :: a,
                         }
     deriving (Show)
 
-```haskell
 memberToMemberOperation :: Num a => (a -> a -> a) -> Vector a -> Vector a -> Vector a
 memberToMemberOperation operation (Vector2 x1 y1) (Vector2 x2 y2) = 
     Vector2 (operation x1 x2) (operation y1 y2)
